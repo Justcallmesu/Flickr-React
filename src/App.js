@@ -4,11 +4,11 @@ import TheFooter from "./Components/Layout/TheFooter.js"
 function App() {
   return (
     <div className="flex flex-col h-screen">
-      {/* <TheHeader /> */}
+      <TheHeader />
       <div className="h-full">
         <h1>Hello There</h1>
       </div >
-      {/* <TheFooter /> */}
+      <TheFooter />
     </div>
   );
 }

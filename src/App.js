@@ -7,7 +7,7 @@ import MainContent from "./Components/Main/MainContent.js"
 
 function App() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col min-h-full h-fit">
       <TheHeader />
       <MainContent />
       <TheFooter />

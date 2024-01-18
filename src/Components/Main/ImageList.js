@@ -2,16 +2,18 @@ import { useEffect, useState } from "react";
 
 function ImageList(props) {
     const [photosData, setPhotos] = useState(null);
-
+    const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
         try {
-            fetch(`http://127.0.0.1:3000/images?page${props.page}&itemsPerPage=${props.perpage}`)
+            setIsLoading(true);
+            fetch(`http://127.0.0.1:3000/images?page${props.page}&itemsPerPage=12`)
                 .then((res) => {
                     return res.json();
                 })
                 .then((data) => {
                     setPhotos(data.body);
                 })
+            setIsLoading(false);
             return () => { }
         } catch (error) {
             console.error(error);
@@ -29,7 +31,9 @@ function ImageList(props) {
 
     return (
         <div className="w-full h-fit min-h-screen shadow-md shadow-gray-300 rounded-md flex flex-wrap gap-2 p-2 justify-center">
-            {generatePhoto()}
+            {
+                isLoading ? <h1>Loading...</h1> : generatePhoto()
+            }
         </div>
     )
 }

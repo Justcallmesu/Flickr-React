@@ -8,6 +8,15 @@ import ImageList from "./ImageList";
 
 function MainContent() {
     const [currentPage, setCurrentPage] = useState(1);
+    const [tags, setCurrentTags] = useState("");
+
+    function handlePagination(value) {
+
+    }
+
+    function handleTags(value) {
+
+    }
 
     return (
         <div className="min-h-screen my-3 mx-10 flex flex-col gap-3">

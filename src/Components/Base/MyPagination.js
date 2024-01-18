@@ -5,11 +5,6 @@ import Button from "./Button.js"
 import { useEffect } from "react";
 
 function MyPagination(props) {
-    function getCurrentPage() {
-        console.log(props.currentPage)
-        return props.currentPage;
-    }
-
     useEffect(() => {
     }, [props.currentPage])
 

@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import TheHeader from "./Components/Layout/TheHeader.js"
+import TheFooter from "./Components/Layout/TheFooter.js"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col h-screen">
+      {/* <TheHeader /> */}
+      <div className="h-full">
+        <h1>Hello There</h1>
+      </div >
+      {/* <TheFooter /> */}
     </div>
   );
 }

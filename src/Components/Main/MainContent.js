@@ -1,6 +1,6 @@
 function MainContent() {
     return (
-        <div>
+        <div className="h-full">
 
         </div>
     );

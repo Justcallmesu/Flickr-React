@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+// Logo
+import Logo from "../../Assets/Logo.png"
+
 // Base
 import MySearchBar from "../Base/MySearchBar";
 import MyPagination from "../Base/MyPagination";
@@ -36,6 +39,11 @@ function MainContent() {
 
     return (
         <div className="min-h-screen my-3 mx-10 flex flex-col gap-3">
+            <div className="w-full flex flex-col items-center justify-center">
+                <img src={Logo} width="100px" alt="Logo" />
+                <h3 className="m-0 text-center">Find Your Favourite Images</h3>
+                <p className="m-0 text-center">Free, High Quality Images</p>
+            </div>
             <MySearchBar search={handleTagsChange} searchInput={tags} setNewSearch={setNewSearchInput} />
             <ImageList page={currentPage} tags={tags} setCurrentMax={setNewMax} />
             <MyPagination currentPage={currentPage} handlePageChange={handlePageChange} pageInputChange={pageInputChange} maxPage={maxPage} />

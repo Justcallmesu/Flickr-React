@@ -9,7 +9,7 @@ function Modal(props) {
     useEffect(() => {
         try {
             setIsLoading(true);
-            fetch(`http://127.0.0.1:3000/images/${props.id}`)
+            fetch(`https://lazy-pink-badger-sock.cyclic.app/images/${props.id}`)
                 .then((res) => {
                     return res.json();
                 })

@@ -10,7 +10,7 @@ function ImageList(props) {
     useEffect(() => {
         try {
             setIsLoading(true);
-            fetch(`http://127.0.0.1:3000/images?page=${props.page}&itemsPerPage=12&tags=${props.tags}`)
+            fetch(`https://lazy-pink-badger-sock.cyclic.app/images?page=${props.page}&itemsPerPage=12&tags=${props.tags}`)
                 .then((res) => {
                     return res.json();
                 })
